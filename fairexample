@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAIR Принципи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        .box {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+            cursor: pointer;
+        }
+        /* Кольори блоків */
+        .findable { background-color: #000; }
+        .accessible { background-color: #A6192E; }
+        .interoperable { background-color: #C30000; }
+        .reusable { background-color: #4E4E4E; }
+        .metadata { background-color: #F2C94C; color: #000; }
+        .protocol { background-color: #6D1A61; }
+        .license { background-color: #4CAF50; }
+        .community { background-color: #2E1A47; }
+
+        /* Стилі для підказок */
+        .tooltip {
+            visibility: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            z-index: 1;
+        }
+        .box:hover .tooltip {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <h1>FAIR Принципи</h1>
+    <div class="container">
+        <!-- Findable -->
+        <div class="box findable" onclick="alert('Findable: Дані повинні бути знайдені за ідентифікаторами.')">
+            Findable
+            <div class="tooltip">Дані мають унікальні та стійкі ідентифікатори (PIDs)</div>
+        </div>
+        <div class="box metadata" onclick="alert('Rich Metadata: Насичені метадані допомагають знайти ваші дані.')">
+            Rich Metadata
+            <div class="tooltip">Насичені метадані</div>
+        </div>
+
+        <!-- Accessible -->
+        <div class="box accessible" onclick="alert('Accessible: Дані повинні бути доступні.')">
+            Accessible
+            <div class="tooltip">Доступ через протоколи</div>
+        </div>
+        <div class="box protocol" onclick="alert('Open Protocols: Відкриті протоколи для доступу.')">
+            Open Protocol
+            <div class="tooltip">Відкриті, вільні протоколи</div>
+        </div>
+
+        <!-- Interoperable -->
+        <div class="box interoperable" onclick="alert('Interoperable: Дані повинні бути сумісними.')">
+            Interoperable
+            <div class="tooltip">Сумісні словники та формати</div>
+        </div>
+        <div class="box interoperable" onclick="alert('Linked Metadata: Метадані повинні бути зв’язаними.')">
+            Linked Metadata
+            <div class="tooltip">Зв'язок з іншими ресурсами</div>
+        </div>
+
+        <!-- Reusable -->
+        <div class="box reusable" onclick="alert('Reusable: Дані мають повторно використовуватись.')">
+            Reusable
+            <div class="tooltip">Повторне використання з ліцензіями</div>
+        </div>
+        <div class="box license" onclick="alert('License: Вкажіть умови використання даних.')">
+            License
+            <div class="tooltip">Ліцензії на дані</div>
+        </div>
+    </div>
+
+    <script>
+        // Можна розширити цей скрипт для більш складної інтерактивності
+        console.log("Інтерактивна сторінка FAIR завантажена.");
+    </script>
+</body>
+</html>
